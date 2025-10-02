@@ -18,7 +18,6 @@ for (let i = numberOfBottles; i >= 0;  i -= 1)
 }
 */
 
-
 /*
 //Instruction 1
 
@@ -130,7 +129,6 @@ rt = hypot(3, 4);
 console.log(rt);
 
 //Operator - 5
-
 function minsec(num) {
   let min = Math.floor(num / 60);
   let sec = num % 60;
