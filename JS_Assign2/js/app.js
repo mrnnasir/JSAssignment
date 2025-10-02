@@ -141,3 +141,14 @@ let prt;
 
 prt = minsec(111);
 console.log(prt);
+
+//
+
+const string = 'Green bottles hanging on the wall';
+let numberOfBottles = 10;
+const string1 = 'And if one green bottle should accidentally fall, there will be ';
+
+console.log(numberOfBottles + ' ' + string + '.' + ' ' + numberOfBottles + ' ' + string);
+--numberOfBottles;
+
+console.log(string1 + numberOfBottles);
