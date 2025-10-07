@@ -1,11 +1,11 @@
 //Assignment Part-1 ------------------------------------------------------------------
 
 const playerName = 'Raihan'
-const playerAge = 45
+const playerAge = 15
 const rightHand = true
 const leftHand = true
 
-function checkEligibility(age) {
+function checkEligibility() {
   if (playerAge < 12)
     return 'Too young to start the adventure'
   else
@@ -43,7 +43,7 @@ else {
 }
 
 console.log('Welcome, ' + playerName + '!')
-console.log(checkEligibility(14))
+console.log(checkEligibility(playerAge))
 console.log(findTheGame)
 console.log(chooseEquipment(rightHand, leftHand) + '\n')
 
@@ -68,12 +68,12 @@ console.log(rollDice() + '\n')
 //Assignment Part-2 ------------------------------------------------------------------
 
 const customerName = 'Raihan'
-const customerAge = 15
+const customerAge = 17
 const hasCash = true
 const hasCard = true
 const paymentType = ['Cash', 'Card']
 
-function ageValidation(age) {
+function ageValidation() {
   if (customerAge < 12) {
     return 'Too young for coffee, maybe try hot chocolate'
   }
