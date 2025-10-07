@@ -1,4 +1,5 @@
-//Assignment part-1
+//Assignment Part-1 ------------------------------------------------------------------
+
 const playerName = 'Raihan'
 const playerAge = 45
 const rightHand = true
@@ -42,11 +43,12 @@ else {
 }
 
 console.log('Welcome, ' + playerName + '!')
-console.log(checkEligibility(playerAge))
+console.log(checkEligibility(14))
 console.log(findTheGame)
-console.log(chooseEquipment(rightHand, leftHand))
+console.log(chooseEquipment(rightHand, leftHand) + '\n')
 
-//Bonus part
+//Bonus part-1---------
+
 let diceNum= [1,2,3,4,5,6]
 
 function rollDice() {
@@ -61,4 +63,67 @@ function rollDice() {
     return 'You rolled ' + diceNum[randomDigit] + '.' +'You have destroyed the monster'
   }
 }
-console.log(rollDice())
+console.log(rollDice() + '\n')
+
+//Assignment Part-2 ------------------------------------------------------------------
+
+const customerName = 'Raihan'
+const customerAge = 15
+const hasCash = true
+const hasCard = true
+const paymentType = ['Cash', 'Card']
+
+function ageValidation(age) {
+  if (customerAge < 12) {
+    return 'Too young for coffee, maybe try hot chocolate'
+  }
+  else {
+    return 'You can order coffee!'
+  }
+}
+
+function paymentOption() {
+  let randomPaymentType = Math.floor(Math.random() * paymentType.length)
+  let cashPay, cardPay;
+
+  if (randomPaymentType === 0 && hasCash) {
+    cashPay = paymentType[randomPaymentType]
+    return 'You paid with ' + cashPay
+  } else if (randomPaymentType === 1 && hasCard) {
+    cardPay = paymentType[randomPaymentType]
+    return 'You paid with ' + cardPay
+  }
+
+}
+
+let orderType;
+
+if (customerAge < 12) {
+  orderType = 'Here is your hot chocolate'
+}
+else if (customerAge>= 12 && customerAge <=17) {
+  orderType = 'Here is your small latte'
+}
+else {
+  orderType = 'Here is your large cappuccino'
+}
+
+console.log('Welcome, ' + customerName + '!')
+console.log(ageValidation(customerAge))
+console.log(paymentOption())
+console.log(orderType + '\n')
+
+//Bonus part-2---------
+
+let diceNumber= [1,2,3,4,5,6]
+
+function diceRoll() {
+  let randomNumber = Math.floor(Math.random() * diceNum.length)
+  if (diceNumber[randomNumber] === 6) {
+    return 'You rolled ' + diceNumber[randomNumber] + '. ' + 'You get a free muffin with your coffee!'
+  }
+  else {
+    return 'You rolled ' + diceNumber[randomNumber] + '. ' + 'No extras today, enjoy your drink!'
+  }
+}
+console.log(diceRoll() + '\n')
