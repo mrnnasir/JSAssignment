@@ -68,13 +68,13 @@ console.log(rollDice() + '\n')
 //Assignment Part-2 ------------------------------------------------------------------
 
 const customerName = 'Raihan'
-const customerAge = 17
+let customerAge = 10
 const hasCash = true
 const hasCard = true
 const paymentType = ['Cash', 'Card']
 
-function ageValidation() {
-  if (customerAge < 12) {
+function ageValidation(age) {
+  if (age < 12) {
     return 'Too young for coffee, maybe try hot chocolate'
   }
   else {
@@ -109,7 +109,7 @@ else {
 }
 
 console.log('Welcome, ' + customerName + '!')
-console.log(ageValidation(customerAge))
+console.log(ageValidation(19))
 console.log(paymentOption())
 console.log(orderType + '\n')
 
